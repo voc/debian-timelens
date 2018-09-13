@@ -1,5 +1,5 @@
 timelens:
-	cargo build --release
+	/usr/bin/cargo build --release
 
 clean:
-	cargo clean
+	/usr/bin/cargo clean
