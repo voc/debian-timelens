@@ -1,5 +1,6 @@
 timelens:
-	/usr/bin/cargo build --release
+	curl -sSf https://static.rust-lang.org/rustup.sh | sh
+	cargo build --release
 
 clean:
-	/usr/bin/cargo clean
+	cargo clean
