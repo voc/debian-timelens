@@ -1,5 +1,5 @@
 timelens:
-	CARGO_HOME=$$(pwd) sh $$(pwd)/tools/rustup.sh -y
+	CARGO_HOME=$$(pwd) sh $$(pwd)/tools/rustup.sh -y --no-modify-path
 	CARGO_HOME=$$(pwd) $$(pwd)/.cargo/bin/cargo build --release
 	cp target/release/timelens .	
 
