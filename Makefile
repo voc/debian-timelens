@@ -1,6 +1,6 @@
 timelens:
 	HOME=$$(pwd) CARGO_HOME=$$(pwd)/.cargo sh $$(pwd)/tools/rustup.sh -y --no-modify-path
-	CARGO_HOME=$$(pwd)/.cargo $$(pwd)/.cargo/bin/cargo build --release
+	HOME=$$(pwd) CARGO_HOME=$$(pwd)/.cargo $$(pwd)/.cargo/bin/cargo build --release
 	cp target/release/timelens .	
 
 install: timelens
