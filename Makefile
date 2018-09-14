@@ -1,6 +1,5 @@
 timelens:
-	export CARGO_HOME=`pwd`
-	$$(pwd)/tools/cargo build --release
+	CARGO_HOME=$$(pwd) $$(pwd)/tools/cargo build --release
 	cp target/release/timelens .	
 
 install: timelens
@@ -8,4 +7,4 @@ install: timelens
 	install -m 0755 timelens $$(pwd)/debian/timelens/usr/local/bin 
 
 clean:
-	$$(pwd)/tools/cargo clean
+	CARGO_HOME=$$(pwd) $$(pwd)/tools/cargo clean
