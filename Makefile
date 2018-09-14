@@ -1,5 +1,5 @@
 timelens:
-	export CARGO_HOME=$$(pwd)
+	export CARGO_HOME=`pwd`
 	$$(pwd)/tools/cargo build --release
 	cp target/release/timelens .	
 
