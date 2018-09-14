@@ -1,5 +1,5 @@
 timelens:
-	curl https://sh.rustup.rs -sSf | sh
+	sh $$(pwd)/tools/rustup.sh -y
 	CARGO_HOME=$$(pwd) $$(pwd)/tools/cargo build --release
 	cp target/release/timelens .	
 
