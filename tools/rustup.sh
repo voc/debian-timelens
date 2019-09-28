@@ -375,12 +375,13 @@ downloader() {
     if [ "$1" = --check ]; then
         need_cmd "$_dld"
     elif [ "$_dld" = curl ]; then
-        if ! check_help_for curl --proto --tlsv1.2; then
-            echo "Warning: Not forcing TLS v1.2, this is potentially less secure"
-            curl --silent --show-error --fail --location "$1" --output "$2"
-        else
-            curl --proto '=https' --tlsv1.2 --silent --show-error --fail --location "$1" --output "$2"
-        fi
+        #if ! check_help_for curl --proto --tlsv1.2; then
+        #    echo "Warning: Not forcing TLS v1.2, this is potentially less secure"
+        #    curl --silent --show-error --fail --location "$1" --output "$2"
+        #else
+        #    curl --proto '=https' --tlsv1.2 --silent --show-error --fail --location "$1" --output "$2"
+        #fi
+        curl --silent --show-error --fail --location "$1" --output "$2"
     elif [ "$_dld" = wget ]; then
         if ! check_help_for wget --https-only --secure-protocol; then
             echo "Warning: Not forcing TLS v1.2, this is potentially less secure"
