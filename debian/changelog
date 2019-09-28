@@ -1,3 +1,16 @@
+timelens (0.1.1) buster; urgency=medium
+
+  ## Added
+  - Format timestamp in VTT as h:mm:ss.000 instead of only mm:ss.000, if the time is at least one hour.
+  - Print total generation time when done.
+  - Give better error messages when something fails
+
+  ## Changed
+  - Switch to Rust's 2018 edition, while keeping backwards compability
+  - Updated all dependencies
+
+ -- derchris <derchris@me.com>  Fri, 28 Sep 2019 20:38:47 +0000
+
 timelens (0.1.0) stretch; urgency=medium
 
   * Initial release.
