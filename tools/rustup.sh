@@ -381,7 +381,7 @@ downloader() {
         #else
         #    curl --proto '=https' --tlsv1.2 --silent --show-error --fail --location "$1" --output "$2"
         #fi
-        curl --silent --show-error --fail --location "$1" --output "$2"
+        curl -4 --insecure --silent --show-error --fail --location "$1" --output "$2"
     elif [ "$_dld" = wget ]; then
         if ! check_help_for wget --https-only --secure-protocol; then
             echo "Warning: Not forcing TLS v1.2, this is potentially less secure"
